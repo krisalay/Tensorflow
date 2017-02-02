@@ -33,7 +33,9 @@ y = A * x_point + B
 cost_function = tf.reduce_mean(tf.square(y - y_point))
 optimizer = tf.train.GradientDescentOptimizer(0.2)  # learning rate is 0.2
 
-#The learning rate determines how fast or slow we move towards the optimal weights. If it is very large, we skip the optimal solution, and if it is too small, we need too many iterations to converge to the best values.
+#The learning rate determines how fast or slow we move towards the optimal weights. 
+#If it is very large, we skip the optimal solution, and if it is too small, we need 
+#too many iterations to converge to the best values.
 
 train = optimizer.minimize(cost_function)
 model = tf.global_variables_initializer()
